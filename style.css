@@ -1,0 +1,334 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+    background-color: #35424a;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding{
+    float: left;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color: orange;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+
+
+/*showcase*/
+
+#showcase{
+    min-height: 400px;
+    background-image: url('train.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -150px;
+}
+
+#showcase h1{
+    text-align: center;
+    font-size: 55px;
+    margin-top: 150px;
+}
+
+
+.navbar a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    padding: 7px;
+    
+}
+
+.navbar ul li {display: inline-block;}
+.navbar ul li:hover {background: #555; transition: 0.5s;}
+.navbar ul li:hover>ul {display: block;}
+.navbar ul li ul {
+            position: absolute;
+            width: 200px;
+            display: none;
+}
+
+.navbar ul li ul li { 
+            background: #555; 
+            display: block;
+            transition: .8s;
+}
+.navbar ul li ul li a {display:block !important;} 
+.navbar ul li ul li:hover {background: black;}
+.navbar a:hover{color: orange; transition: 0.5s;}
+
+.navbar{
+    width: 100%;
+    background-color: black;
+}
+
+.navbar ul{
+    padding: 0px;
+    margin: 0;
+    
+}
+
+.navbar ul li ul li{
+    position: relative;
+}
+
+.navbar ul li ul li ul{
+    position: absolute;
+    left: 200px;
+    top: 0px;
+}
+
+
+
+.booking{
+    background-color: orange;
+    width: 20%;
+    padding: 5px;
+    float: left;
+}
+
+.booking h1{
+    text-align: center;
+}
+
+.information{
+    float:right;
+    margin-right: 4%;
+    width: 75%;
+    overflow:hidden;
+}
+
+
+.parallax {
+            /* The image used */
+        background-image: url("happy_journey.jpg");
+        /* Set a specific height */
+        min-height: 100px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: 0 100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 0px;
+        }
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+.news{
+    float: left;
+    width: 20%;
+    padding:5px;
+    border-right: 1px solid black;
+}
+
+.news a{
+    text-decoration: none;
+}
+
+.news ul{
+    list-style-type: square;
+}
+
+.news ul li:hover{
+    font-weight: bold;
+}
+
+.save img{
+    margin: 10px;
+}
+
+.login{
+    width: 25%;
+    float:left;
+    padding: 15px;
+}
+
+#rail{
+    float:left;
+    width: 38%;
+    overflow: hidden;
+}
+
+.signup{
+    width: 60%;
+    float:left;
+}
+
+table,th,td{
+    border: 2px solid black;
+    border-collapse:collapse;
+}
+
+th,td{
+    text-align: center;
+}
+
+table ul{
+    list-style-type: none;
+}
+
+table ul li{
+    display: inline;
+    float: left;
+    padding: 5px;
+    padding-bottom: 10%;
+}
+
+table a{
+    text-decoration: none;
+    color: black;
+}
+
+td:hover{
+    background-color: lightgrey;
+    color: red;
+}
+
+table a:hover{
+    color: red;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.green:hover{
+    background-color: white;
+    color: green;
+}
+
+.ad{
+    border:none;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    box-shadow: 2px 5px;
+}
+
+
+#catering{
+    min-height: 400px;
+    background-image: url('catring.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -150px;
+    border-bottom: #e8491d 3px solid;
+    background-attachment: fixed;
+    background-position: 0 3px;
+}
+
+#catering h1{
+    color: white;
+    text-align: center;
+    font-size: 55px;
+    margin-top: 150px;
+}
+
+
+.pnr{
+    margin: auto;
+    width: 40%;
+}
+
+.order{
+    opacity: 0.8;
+    color: black;
+    font-size: 35px;
+}
+
+.order:hover{
+    opacity: 1;
+    background-color: orange;
+    
+}
+
+.food{
+    width: 30%;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 20px;
+    display: none;
+}
+
+.standard_menu{
+    width: 60%;
+    margin: auto;
+    margin: auto;
+}
+
+.standard_menu .table{
+    width: 100%;
+    padding: 5px;
+}
+
+#standard_rates{
+    min-height: 400px;
+    background-image: url('standard_menu1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -150px;
+    border-bottom: #e8491d 3px solid;
+    background-attachment: fixed;
+    background-position: 0 3px;
+}
+
+#standard_rates h1{
+    color: white;
+    text-align: center;
+    font-size: 55px;
+    margin-top: 150px;
+}

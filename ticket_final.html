@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome | Digital Railways</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function abc(){
+            var mob=document.forms["myForm"]["mob"].value;
+            var drop=document.forms["myForm"]["drop"].value;
+            var adhar=document.forms["myForm"]["adhar"].value;
+            if(isNaN(mob)){
+                alert("invalid mobile number");
+                return false;
+            }
+            else if(mob.length!=10){
+                alert("invalid mobile number");
+                return false;
+            }
+            else if(drop=="a"){
+                alert("select a class");
+                return false;
+            }
+            else if(isNaN(adhar)){
+                alert("invalid aadhaar number");
+                return false;
+            }
+            else{
+                var con=confirm("Want to book the ticket");
+                if(con==true){
+                    alert("thanks for booking");
+                    return true;
+                }
+                else{
+                    var ask=prompt("any reason: ","");
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1 title="Digital Railways"><span class="highlight">Digital</span> Railways</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home_page.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="login_form.html">Signout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to the new era of travelling</h1>
+        </div>
+    </section>
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Book Meal</a>
+                <ul>
+                    <li><a href="#">E-Catering</a></li>
+                    <li><a href="#">Standard Menu Rates</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tourism</a>
+                <ul>
+                    <li><a href="#">Digital Tourism</a>
+                        <ul>
+                            <li><a href="#">Tourist Train</a></li>
+                            <li><a href="#">Tour Packages</a></li>
+                            <li><a href="#">International Packages</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Accomodations</a></li>
+                    <li><a href="#">E-Bedroll</a></li>
+                    <li><a href="#">E-Wheelchair</a></li>
+                    <li><a href="#">Cab</a></li>
+                </ul>
+            </li>
+            <li><a href="#">More</a>
+                <ul>
+                    <li><a href="#">Digital Rail App</a></li>
+                    <li><a href="#">Digital E-Wallet</a></li>
+                    <li><a href="#">User Guide</a>
+                        <ul>
+                            <li><a href="#">User Registration Guide</a></li>
+                            <li><a href="#">Quick Book Ticket Guide</a></li>
+                            <li><a href="#">Cancelling E-ticket</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Wi-fi Railway Stations</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <div class="signup">
+            <h2>Enter Details</h2>
+            <hr><hr>
+            <form action="#" name="myForm" onsubmit="return abc();">
+                <label>Name:</label>
+                <input type="number" min="1" max="100" style="float:right;margin-left: 2%; width: 26%;" placeholder="age" required><input type="text" style="float:right;" placeholder="1st passenger name"><br><br>
+                <input type="number" min="1" max="100" style="float:right;margin-left: 2%;width: 26%;" placeholder="age"><input type="text" style="float:right;" placeholder="2nd passenger name"><br><br>
+                <input type="number" min="1" max="100" style="float:right;margin-left: 2%;width: 26%;" placeholder="age"><input type="text" style="float:right;" placeholder="3rd passenger name"><br><br>
+                <input type="number" min="1" max="100" style="float:right;margin-left: 2%;width: 26%;" placeholder="age"><input type="text" style="float:right;" placeholder="4th passenger name"><br><br>
+                <input type="number" min="1" max="100" style="float:right;margin-left: 2%;width: 26%;" placeholder="age"><input type="text" style="float:right;" placeholder="5th passenger name"><br><br>
+                <hr>
+                <label>Mobile no:</label>
+                <input type="text" id="mob" placeholder="mobile number" style="float:right;" required><br><br>
+                
+                <label>Source:</label>
+                <input type="text" placeholder="source station" style="float:right;" required><br><br>
+                
+                <label>Destination:</label>
+                <input type="text" placeholder="destination station" style="float:right;" required><br><br>
+                
+                <label>Class:</label>
+                <select name="dropdown" id="drop" style="float:right;">
+                    <option value="a">---Select Class---</option>
+                    <option value="b">Ac 1 tier</option>
+                    <option value="c">Ac 2 tier</option>
+                    <option value="d">Ac 3 tier</option>
+                    <option value="e">Sleeper</option>
+                </select><br><br>
+                
+                <label>Aadhaar card no:</label>
+                <input type="text" name="adhar" id="adhar" required style="float:right;" placeholder="aadhaar number"><hr><hr><br><br>
+                
+                <input type="submit">
+            </form>
+        </div>
+        <div id="rail">
+            <img src="logo.gif" width="400px;" style="padding-top: 17%;float:right;">
+        </div>
+    </div>
+    
+    
+    <p style="padding-bottom: 100px;"></p>
+    <div class="parallax">
+        <div align="center" style="font-size: 100px;padding-top: 100px;padding-bottom: 100px;color: rgba(255,0,0,0.8);"><b>Have a nice journey</b></div>
+    </div>
+    <footer>
+        <p>Digital Railways copyright, &copy; 2018</p>
+    </footer>
+</body>
+</html>

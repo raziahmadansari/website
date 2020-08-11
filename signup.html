@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup | Digital Railway</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function abc(){
+            var pass1=document.forms["myForm"]["pass1"].value;
+            var pass2=document.forms["myForm"]["pass2"].value;
+            var capt =document.forms["myForm"]["capt"].value;
+            var mob  =document.forms["myForm"]["mob"].value;
+            if(pass1==pass2){
+                var securityQuestion = document.forms["myForm"]["dropdown"].value;
+                var country = document.forms["myForm"]["country"].value;
+                if(securityQuestion=="a"){
+                    alert("please select a security question");
+                    return false;
+                }
+                else if(country=="a"){
+                    alert("please select a country");
+                    return false;
+                }
+                else if(isNaN(mob) || mob.length!=10){
+                    alert("invalid mobile number");
+                    return false;
+                }
+                else if(capt!="qGphJ"){
+                    alert("captcha doesn't match");
+                    return false;
+                }
+                else{
+                    alert("Id created successfully<br>click to continue");
+                    return true;
+                }
+            }
+            else{
+                alert("password doesn't match");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Digital</span> Railways</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about1.html">About</a></li>
+                    <li><a href="feedback1.html">Feedback</a></li>
+                    <li><a href="login_form.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="main">
+        <div class="container">
+            
+            <div class="signup">
+                <h1>Signup</h1>
+                <hr>
+                <p>Stared item must be filled</p>
+                <form action="login_form.html" name="myForm" onsubmit="return abc();">
+                    User ID*:<input type="text" name="username" placeholder="Enter User ID" required style="float:right;"><br><br>
+                    Password*:<input type="password" name="pass" id="pass1" placeholder="Enter Password" required style="float:right;"><br><br>
+                    Confirm Password*: <input type="password" name="pas" id="pass2" placeholder="Enter Password Again" required style="float:right"><br><br>
+                    Security Question*:
+                    <select name="dropdown" style="float:right;" id="dropdown">
+                        <option value="a" selected>---Select your security question---</option>
+                        <option value="b" >What is your pet name?</option>
+                        <option value="c" >What was the name of your first school?</option>
+                        <option value="d" >Who was your childhood hero?</option>
+                        <option value="e" >What is your favorite past-time?</option>
+                        <option value="f" >What is your father's middle name?</option>
+                    </select><br><br>
+                    Security Answer*: <input type="text" name="sanswer" placeholder="Give your answer" required style="float:right;"><br><br>
+                    <hr>
+                    <h1>Personal Details</h1>
+                    <hr>
+                    First Name*:<input type="text" id="ffname" name="fname" required style="float:right;"><br><br>
+                    Middle Name:<input type="text" name="mname" style="float:right;"><br><br>
+                    Last Name:<input type="text" name="lname" style="float:right;"><br><br>
+                    
+                    Genger:<span>&nbsp;</span>
+                    Male: <input type="radio" name="gender" value="male">
+                    Female: <input type="radio" name="gender" value="female">
+                    Transgender: <input type="radio" name="gender" value="Trans"><br><br>
+                    
+                    Martial Status:<span>&nbsp;</span>
+                    Married: <input type="radio" name="mars" value="ma">
+                    Unmarried: <input type="radio" name="mars" value="un"><br><br>
+                    
+                    
+                    Date of birth*: <input type="date" name="dob" required style="float:right;"><br><br>
+                    
+                    
+                    
+                    Occupation:
+                    <select name="occu" style="float:right;">
+                        <option value="a" selected>---Select occupation---</option>
+                        <option value="b" >Government</option>
+                        <option value="c" >Public</option>
+                        <option value="d" >Private</option>
+                        <option value="e" >Professional</option>
+                        <option value="f" >Self Employed</option>
+                        <option value="g" >Student</option>
+                        <option value="h" >Others</option>
+                    </select><br><br>
+                    
+                    
+                    
+                    
+                    Aadhaar Card No: (optional)<input type="text" name="adhar" style="float:right"><br><br>
+                    Pan Card No: (optional)<input type="text" name="pan" style="float:right"><br><br>
+                    
+                    
+                    Country*:
+                    <select name="country" style="float:right;" id="country">
+                        <option value="a" selected>---Select Country---</option>
+                        <option value="b" >India</option>
+                        <option value="c" >Afghanistan</option>
+                        <option value="d" >Australia</option>
+                        <option value="e" >Cuba</option>
+                        <option value="f" >Mexico</option>
+                        <option value="g" >Thailand</option>
+                        <option value="h" >Yemen</option>
+                        <option value="h" >Others</option>
+                    </select><br><br>
+                    
+                    
+                    E-Mail*: <input type="email" name="e-mail" required style="float:right"><br><br>
+                    
+                    
+                    <hr>
+                    <h1>Residential Address</h1>
+                    <hr>
+                    
+                    Flat/Door/Block No: <input type="text" name="street" style="float:right"><br><br>
+                    Street/Lane: <input type="text" name="lane" style="float:right"><br><br>
+                    Area/Locality: <input type="text" name="locality" style="float:right"><br><br>
+                    Pin Code*: <input type="text" name="pin" required style="float:right"><br><br>
+                    State*: <input type="text" name="state" required style="float:right"><br><br>
+                    City*: <input type="text" name="city" required style="float:right"><br><br>
+                    Phone No*: <input type="text" name="Phone" id="mob" required style="float:right"><br><br>
+                    
+                    
+                    <img src="captcha.png" width="100px" style="float:right;"><br><br><br>
+                    Captcha:<input type="text" name="cap" id="capt" placeholder="Enter Captcha" required style="float:right;"><br><br>
+                    <input type="submit" class="green" style="float:right;">
+                    <input type="reset" style="float:right;margin-right: 10%;"><br>
+                </form>
+                <hr>
+            </div>
+            <div id="rail">
+                <p style="padding-bottom: 10%;"></p>
+                <img src="logo.gif" width="100%;">
+                <p style="padding-bottom: 20%;"></p>
+                <img class="ad" src="ad2.jpg" width="100%" style="margin-left: 20px;"title="A Coca-Cola product">
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>Digital Railways copyright, &copy; 2018</p>
+    </footer>
+</body>
+</html>

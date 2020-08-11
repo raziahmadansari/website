@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback | Digital Railways</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function abc()
+        {
+            var feed=document.forms["myForm"]["feed"].value;
+            if(feed==null || feed==""){
+                alert("feedback box is empty");
+                return false;
+            }
+            else{
+                window.alert("Thanks for your feedback");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Digital</span> Railways</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home_page.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="feedback.html">Feedback</a></li>
+                    <li><a href="login_form.html">Signout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">Feedback</h1>
+                <p>Please add any comments you have for improving the website. We welcome suggestions on specific areas for improvements, features you would like to see added to the site, and examples of what you consider good websites.</p>
+                
+                
+                <form action="#" name="myForm" onsubmit="return abc();">
+                    Name: &nbsp;<input type="text" placeholder="name" required><br><br>
+                    E-mail: <input type="email" placeholder="E-Mail" required><br><br>
+                    Comments:<br><textarea name="comment" id="feed" rows="5" cols="30" placeholder="add comment"></textarea><br><br>
+                    <input type="submit">
+                </form>
+                
+            </article>
+        </div>
+    </section>
+    <p style="padding-bottom: 8.2%;"></p>
+    <footer>
+        <p>Digital Railways copyright, &copy; 2018</p>
+    </footer>
+</body>
+</html>

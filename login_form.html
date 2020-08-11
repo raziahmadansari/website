@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Digital Railway</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function abc(){
+            var user=document.forms["myForm"]["username"].value;
+            var pass=document.forms["myForm"]["pass"].value;
+            if((user=="razi" && pass==12345)||(user=="sonu" && pass==1234)||(user=="pradhuman" && pass==123)){
+                
+                var captcha=document.forms["myForm"]["capt"].value;
+                if(captcha=="qGphJ"){
+                    return true;
+                }
+                else{
+                    alert("captcha doesn't match");
+                    return false;
+                }
+            }
+            else{
+                alert("username and password doesn't match");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Digital</span> Railways</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about1.html">About</a></li>
+                    <li><a href="feedback1.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="main">
+        <div class="container">
+            
+            <div class="login">
+                <h1>Login</h1>
+                <hr>
+                <form action="home_page.html" name="myForm" onsubmit="return abc();">
+                    Username:<input type="text" name="username" id="username" placeholder="Enter Username" required style="float:right;"><br><br>
+                    Password:<input type="password" name="pass" id="pass" placeholder="Enter Password" required style="float:right;"><br><br>
+                    <img src="captcha.png" width="200px"><br><br>
+                    Captcha:<input type="text" name="cap" id="capt" placeholder="Enter Captcha" required style="float:right;"><br><br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me<br><br>
+                    </label>
+                    <input type="submit" class="green" value="Login"><br><hr>
+                    
+                    <input type="reset">
+                    <button type="button"><a href="signup.html" style="text-decoration:none;">Signup</a></button>
+                    <button type="button"><a href="forgot_password.html" style="text-decoration:none;">Forget Password</a></button>
+                </form>
+                <hr>
+            </div>
+            <div id="rail">
+                <img src="logo.gif" width="400px;">
+            </div>
+            
+            <div class="news" style="width: 340px;">
+                <h1>News</h1>
+                <hr>
+                <ul>
+                    <li><p>IRCTC Offers 11 Nights/12 Days Package For Rs. 11,340. Details Here</p></li>
+                    <li><p>K. L. Saigal's Journey: From Railway Timekeeper To Bollywood's First Superstar</p></li>
+                    <li><p>Rajasthan School Gets Railway Themed Classrooms</p></li>
+                    <li><p>Railway Deaths, Injuries Have Reduced By Half Last Year, Says Top Officer</p></li>
+                    <li><p>Tatkal Ticket Reservation: Latest Rules You Should Know About Online Booking</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>Digital Railways copyright, &copy; 2018</p>
+    </footer>
+</body>
+</html>

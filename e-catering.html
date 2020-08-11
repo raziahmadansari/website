@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome | Digital Railways</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function abc(){
+            var pnr=document.forms["order"]["pnr"].value;
+            if(isNaN(pnr)){
+                alert("invalid pnr number");
+                return false;
+            }
+            else if(pnr.length!=10){
+                alert("invalid pnr number");
+                return false;
+            }
+            else{
+                var v=prompt("Enter OTP sent on mobile","OTP here");
+                if(v=="12345"){
+                    alert("now choose food option");
+                    var show=document.getElementById('food1');
+                    show.style.display='block';
+                }
+                else{
+                    alert("invalid OTP");
+                }
+                return false;
+            }
+        }
+        
+        function abcd(){
+            var va=confirm("sure to book the meal");
+            if(va==true){
+                alert("your order has been placed");    
+            }
+            var show=document.getElementById('food1');
+            show.style.display='none';
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1 title="Digital Railways"><span class="highlight">Digital</span> Railways</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home_page.html">Home</a></li>
+                    <li class="current"><a href="#">e-catering</a></li>
+                    <li><a href="login_form.html">Signout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="catering">
+        <div class="container">
+            <h1 style="color: orange;">Get food delivered on train berth</h1>
+            <div class="pnr">
+                <form action="#" name="order" onsubmit="return abc();">
+                    <input class="order" id="pnr" type="text" placeholder="Enter 10 digit PNR" required style="width: 400px;height: 50px;border-radius: 20px;padding: 5px;font-size: 35px;"><br><br><br>
+                    <input class="order" type="submit" style="height: 50px;border-radius: 20px;">
+                </form>
+            </div>
+            <p style="text-align:center;font-size: 40px; color: white;">An official website of <span style="color: orange;font-weight: bold;">Digital</span> Railways</p>
+        </div>
+    </section>
+    
+    
+    <div class="food" id="food1">
+        <footer></footer>
+        <form action="#" name="confirm" onsubmit="return abcd();">
+            <fieldset>
+                <legend>Order Food</legend>
+                <label>Tea:</label>
+                <select name="dropdownT" id="dropT" style="float:right;">
+                    <option value="a" selected>-------</option>
+                    <option value="b">standard tea (150ml)</option>
+                    <option vlaue="c">tea (with tea bag) (150 ml)</option>
+                    <option vlaue="d">coffee</option>
+                    <option value="e">tea in pots</option>
+                    <option value="f">coffee in pots</option>
+                </select><br>
+                <label>Breakfast:</label>
+                <select name="dropdown" id="drop" style="float:right;">
+                    <option value="a" selected>-------</option>
+                    <option value="d">janta meal</option>
+                    <option value="c">vegetarian breakfast</option>
+                    <option vlaue="b">non-vegetarian breakfast</option>
+                </select><br>
+                <label>Standard Thali Meals:</label>
+                <select name="dropdown_thali" id="drop_thali" style="float:right;">
+                    <option value="a" selected>-------</option>
+                    <option value="d">meals in thalis (veg)</option>
+                    <option value="c">meals in thalis (non-veg)</option>
+                </select><br>
+                <label>Cold Drinks:</label>
+                <select name="dropdown1" id="drop1" style="float:right;">
+                    <option value="a" selected>-------</option>
+                    <option vlaue="b">sprite</option>
+                    <option vlaue="c">limca</option>
+                    <option vlaue="d">pepsi</option>
+                    <option vlaue="e">dew</option>
+                </select><br>
+                <label>Water:</label>
+                <input type="checkbox" checked style="float:right;"><br>
+                <input type="submit" style="float:right;" class="green">
+            </fieldset>
+        </form>
+        <footer></footer>
+    </div>
+    
+    
+    <footer></footer>
+    
+    <div class="parallax">
+        <div align="center" style="font-size: 100px;padding-top: 100px;padding-bottom: 100px;color: rgba(255,0,0,0.8);"><b>Have a nice journey</b></div>
+    </div>
+    <footer>
+        <p>Digital Railways copyright, &copy; 2018</p>
+    </footer>
+</body>
+</html>
